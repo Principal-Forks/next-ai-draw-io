@@ -1,0 +1,127 @@
+version: "1.0.0"
+name: "Next AI Draw.io Component Library"
+
+nodeComponents:
+  NextApp:
+    type: "framework"
+    category: "frontend"
+    description: "Next.js application entry point"
+    icon: "react"
+    properties:
+      - name: "version"
+        type: "string"
+        required: true
+      - name: "port"
+        type: "number"
+        default: 6002
+
+  AIProvider:
+    type: "service"
+    category: "ai"
+    description: "AI provider integration (OpenAI, Anthropic, etc.)"
+    icon: "brain"
+    properties:
+      - name: "provider"
+        type: "enum"
+        values: ["openai", "anthropic", "azure", "aws", "google", "deepseek", "openrouter"]
+        required: true
+      - name: "model"
+        type: "string"
+        required: true
+
+  APIRoute:
+    type: "api"
+    category: "backend"
+    description: "Next.js API route"
+    icon: "api"
+    properties:
+      - name: "method"
+        type: "enum"
+        values: ["GET", "POST", "PUT", "DELETE"]
+        required: true
+      - name: "path"
+        type: "string"
+        required: true
+
+  Component:
+    type: "ui"
+    category: "frontend"
+    description: "React component"
+    icon: "component"
+    properties:
+      - name: "type"
+        type: "enum"
+        values: ["chat", "dialog", "input", "button", "panel"]
+        required: true
+
+  Context:
+    type: "state"
+    category: "frontend"
+    description: "React context provider"
+    icon: "context"
+    properties:
+      - name: "name"
+        type: "string"
+        required: true
+
+  Database:
+    type: "storage"
+    category: "backend"
+    description: "Data storage layer"
+    icon: "database"
+    properties:
+      - name: "type"
+        type: "enum"
+        values: ["memory", "file", "external"]
+        required: true
+
+  Monitoring:
+    type: "observability"
+    category: "devops"
+    description: "Monitoring and analytics service"
+    icon: "monitoring"
+    properties:
+      - name: "service"
+        type: "enum"
+        values: ["langfuse", "vercel", "otel"]
+        required: true
+
+edgeComponents:
+  HTTPRequest:
+    type: "communication"
+    description: "HTTP request/response"
+    icon: "http"
+    properties:
+      - name: "method"
+        type: "enum"
+        values: ["GET", "POST", "PUT", "DELETE"]
+        required: true
+
+  DataFlow:
+    type: "data"
+    description: "Data flow between components"
+    icon: "arrow"
+    properties:
+      - name: "dataType"
+        type: "enum"
+        values: ["json", "text", "binary", "stream"]
+        required: true
+
+  EventFlow:
+    type: "event"
+    description: "Event propagation"
+    icon: "event"
+    properties:
+      - name: "eventType"
+        type: "string"
+        required: true
+
+  Import:
+    type: "dependency"
+    description: "Module import relationship"
+    icon: "import"
+    properties:
+      - name: "moduleType"
+        type: "enum"
+        values: ["default", "named", "side-effect"]
+        required: true
