@@ -1,0 +1,118 @@
+version: "1.0.0"
+name: "Next AI Draw.io Component Library"
+
+nodeComponents:
+  NextApp:
+    description: "Next.js application entry point"
+    tags: ["framework", "frontend"]
+    defaultLabel: "Next.js App"
+    shape: "rectangle"
+    color: "#0070f3"
+    dataSchema:
+      version:
+        type: "string"
+        required: true
+      port:
+        type: "number"
+        required: false
+
+  AIProvider:
+    description: "AI provider integration (OpenAI, Anthropic, etc.)"
+    tags: ["service", "ai"]
+    defaultLabel: "AI Provider"
+    shape: "cloud"
+    color: "#10b981"
+    dataSchema:
+      provider:
+        type: "string"
+        required: true
+      model:
+        type: "string"
+        required: true
+
+  APIRoute:
+    description: "Next.js API route"
+    tags: ["api", "backend"]
+    defaultLabel: "API Route"
+    shape: "rectangle"
+    color: "#ff6b35"
+    dataSchema:
+      method:
+        type: "string"
+        required: true
+      path:
+        type: "string"
+        required: true
+
+  Component:
+    description: "React component"
+    tags: ["ui", "frontend"]
+    defaultLabel: "Component"
+    shape: "rectangle"
+    color: "#8b5cf6"
+    dataSchema:
+      type:
+        type: "string"
+        required: true
+
+  Context:
+    description: "React context provider"
+    tags: ["state", "frontend"]
+    defaultLabel: "Context"
+    shape: "ellipse"
+    color: "#f59e0b"
+    dataSchema:
+      name:
+        type: "string"
+        required: true
+
+  Database:
+    description: "Data storage layer"
+    tags: ["storage", "backend"]
+    defaultLabel: "Database"
+    shape: "cylinder"
+    color: "#3b82f6"
+    dataSchema:
+      type:
+        type: "string"
+        required: true
+
+  Monitoring:
+    description: "Monitoring and analytics service"
+    tags: ["observability", "devops"]
+    defaultLabel: "Monitoring"
+    shape: "diamond"
+    color: "#ef4444"
+    dataSchema:
+      service:
+        type: "string"
+        required: true
+
+edgeComponents:
+  HTTPRequest:
+    description: "HTTP request/response"
+    tags: ["communication"]
+    style: "solid"
+    color: "#dc2626"
+    directed: true
+
+  DataFlow:
+    description: "Data flow between components"
+    tags: ["data"]
+    style: "solid"
+    color: "#059669"
+    directed: true
+
+  EventFlow:
+    description: "Event propagation"
+    tags: ["event"]
+    style: "dashed"
+    color: "#f59e0b"
+    directed: true
+
+  Import:
+    description: "Module import relationship"
+    tags: ["dependency"]
+    style: "solid"
+    color: "#6b7280"
+    directed: true
