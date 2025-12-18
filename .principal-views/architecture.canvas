@@ -218,6 +218,8 @@
       "id": "app-to-chat-panel",
       "fromNode": "next-app",
       "toNode": "chat-panel",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#6b7280",
       "pv": {
         "edgeType": "Import"
@@ -227,6 +229,8 @@
       "id": "app-to-chat-input",
       "fromNode": "next-app",
       "toNode": "chat-input",
+      "fromSide": "right",
+      "toSide": "top",
       "color": "#6b7280",
       "pv": {
         "edgeType": "Import"
@@ -236,6 +240,8 @@
       "id": "app-to-settings",
       "fromNode": "next-app",
       "toNode": "settings-dialog",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#6b7280",
       "pv": {
         "edgeType": "Import"
@@ -245,6 +251,8 @@
       "id": "context-to-app",
       "fromNode": "diagram-context",
       "toNode": "next-app",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#6b7280",
       "pv": {
         "edgeType": "Import"
@@ -254,6 +262,8 @@
       "id": "chat-panel-to-api",
       "fromNode": "chat-panel",
       "toNode": "chat-api",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#dc2626",
       "pv": {
         "edgeType": "HTTPRequest"
@@ -263,6 +273,8 @@
       "id": "settings-to-config-api",
       "fromNode": "settings-dialog",
       "toNode": "config-api",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#dc2626",
       "pv": {
         "edgeType": "HTTPRequest"
@@ -272,6 +284,8 @@
       "id": "chat-api-to-openai",
       "fromNode": "chat-api",
       "toNode": "openai-provider",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
@@ -281,6 +295,8 @@
       "id": "chat-api-to-anthropic",
       "fromNode": "chat-api",
       "toNode": "anthropic-provider",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
@@ -290,6 +306,8 @@
       "id": "chat-api-to-azure",
       "fromNode": "chat-api",
       "toNode": "azure-provider",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
@@ -299,6 +317,8 @@
       "id": "chat-api-to-aws",
       "fromNode": "chat-api",
       "toNode": "aws-provider",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
@@ -308,6 +328,8 @@
       "id": "chat-api-to-cache",
       "fromNode": "chat-api",
       "toNode": "cached-responses",
+      "fromSide": "left",
+      "toSide": "right",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
@@ -317,6 +339,8 @@
       "id": "cache-to-chat-api",
       "fromNode": "cached-responses",
       "toNode": "chat-api",
+      "fromSide": "right",
+      "toSide": "left",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
@@ -326,6 +350,8 @@
       "id": "chat-api-to-langfuse",
       "fromNode": "chat-api",
       "toNode": "langfuse",
+      "fromSide": "bottom",
+      "toSide": "top",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
@@ -335,6 +361,8 @@
       "id": "app-to-vercel",
       "fromNode": "next-app",
       "toNode": "vercel-analytics",
+      "fromSide": "right",
+      "toSide": "left",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
@@ -344,6 +372,8 @@
       "id": "app-to-otel",
       "fromNode": "next-app",
       "toNode": "otel-tracing",
+      "fromSide": "bottom",
+      "toSide": "left",
       "color": "#059669",
       "pv": {
         "edgeType": "DataFlow"
